@@ -1,0 +1,18 @@
+[Unit]
+Description=Hydrological Water Quality Data Processing Service
+After=network.target
+
+[Service]
+# 指定低权限用户、用户组运行，禁止root启动
+User=operator
+Group=hydro
+# 业务脚本路径
+ExecStart=/bin/bash /data/hydro/data_collector.sh
+# 进程异常退出自动重启
+Restart=on-failure
+# 重启间隔5秒
+RestartSec=5
+
+[Install]
+# 开机随系统启动
+WantedBy=multi-user.target
