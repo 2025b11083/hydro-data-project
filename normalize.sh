@@ -2,7 +2,6 @@
 #水文数据标准化脚本 normalize.sh
 #用法 ./normalize.sh 输入文件.csv 输出文件.csv
 
-#参数校验
 if [ $# -ne 2 ];then
     echo "使用方法：$0 input.csv output.csv"
     exit 1

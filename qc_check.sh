@@ -18,7 +18,7 @@ BEGIN{
     err_time_unorder=0  #时间乱序
     err_line=""
 }
-NR==1{next} #跳过表头
+NR==1{next} 
 {
     total++
     station=$1
